@@ -151,11 +151,6 @@
             margin-bottom: 2.5rem;
         }
 
-        .hero-p span {
-            color: var(--bp-white);
-            border-bottom: 1px dashed var(--bp-pink);
-        }
-
         .cta-container {
             display: flex;
             gap: 1.5rem;
@@ -284,6 +279,7 @@
 
         .card-bullets {
             list-style: none;
+            margin-bottom: 1.5rem;
         }
 
         .card-bullets li {
@@ -301,6 +297,31 @@
             left: 0;
             color: var(--bp-pink);
             font-size: 0.75rem;
+        }
+
+        .paper-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--bp-pink);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: 1px solid rgba(255, 101, 163, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            width: fit-content;
+            margin-top: auto;
+        }
+
+        .paper-link:hover {
+            background: rgba(255, 101, 163, 0.1);
+            border-color: var(--bp-pink);
+            box-shadow: 0 0 10px rgba(255, 101, 163, 0.3);
+            color: var(--bp-white);
         }
 
         .interests-grid {
@@ -416,31 +437,6 @@
             margin-bottom: 2rem;
         }
 
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            justify-content: center;
-        }
-
-        .skill-pill {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--bp-white);
-            padding: 0.6rem 1.4rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-        }
-
-        .skill-pill:hover {
-            border-color: var(--bp-pink);
-            color: var(--bp-pink);
-            box-shadow: 0 0 15px rgba(255, 101, 163, 0.2);
-            transform: scale(1.03);
-        }
-
         @keyframes bpFade {
             from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
@@ -483,7 +479,7 @@
             <div class="stage-badge">✦ STEM In Your Area</div>
             <h1>Biomedical Researcher,<br>Founder & Musician.</h1>
             <p class="hero-p">
-                I am a <span>Student Researcher</span>, <span>Medical Writer & Scientific Reviewer</span>, and the <span>Founder of a medical startup</span>. Balancing rigorous analytical thinking across biotechnology platforms with creative composition as a passionate <span>Musician</span>.
+                I am a Student Researcher, Scientific Reviewer, Founder of STEM community who loves working in creative writing and aims to merge the field of Tech, Biomedical Science and research into one whole idea.
             </p>
             <div class="cta-container">
                 <a href="mailto:kanika06123@gmail.com" class="btn btn-pink">Get In Touch</a>
@@ -590,7 +586,6 @@
                     </div>
                 </div>
 
-                <!-- Added International Science Reserve -->
                 <div class="pink-card">
                     <div>
                         <span class="card-date">GLOBAL ALLIANCE</span>
@@ -625,6 +620,7 @@
                             <li>Cross-evaluated trial statistics for emerging treatments including Lecanemab and Donanemab monoclonal applications.</li>
                         </ul>
                     </div>
+                    <a href="Alzheimers_Review.pdf" target="_blank" class="paper-link">Read Paper ↗</a>
                 </div>
 
                 <div class="pink-card">
@@ -662,6 +658,7 @@
                             <li>Utilized structured APA-formatted research matrices to clean qualitative observational datasets.</li>
                         </ul>
                     </div>
+                    <a href="Bluelight_Review.pdf" target="_blank" class="paper-link">Read Paper ↗</a>
                 </div>
             </div>
         </section>
