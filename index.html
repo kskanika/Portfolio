@@ -303,11 +303,50 @@
             font-size: 0.75rem;
         }
 
+        /* Interest Elements Layout */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interest-card {
+            background: linear-gradient(145deg, #121216, #0e0e12);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .interest-card:hover {
+            border-color: var(--bp-pink);
+            box-shadow: 0 8px 20px rgba(255, 101, 163, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .interest-icon {
+            color: var(--bp-pink);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .interest-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Sci-Bites Empty State Structure */
         .blog-box {
             background: var(--bp-dark-gray);
             border: 1px solid var(--border-pink);
             border-radius: 4px;
             padding: 3rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .blog-tabs {
@@ -317,6 +356,7 @@
             padding-bottom: 1rem;
             margin-bottom: 2.5rem;
             overflow-x: auto;
+            justify-content: center;
         }
 
         .tab-btn {
@@ -341,23 +381,40 @@
         .blog-content-item {
             display: none;
             animation: bpFade 0.5s ease forwards;
+            max-width: 650px;
+            margin: 0 auto;
         }
 
         .blog-content-item.active {
             display: block;
         }
 
+        .coming-soon-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: rgba(255, 101, 163, 0.1);
+            color: var(--bp-pink);
+            padding: 0.3rem 1rem;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
         .blog-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.85);
         }
 
         .blog-text {
-            color: var(--bp-muted);
+            color: #6b6b76;
             font-size: 0.95rem;
             line-height: 1.7;
+            font-style: italic;
             margin-bottom: 2rem;
         }
 
@@ -414,10 +471,10 @@
         <div class="logo">KANIKA <span>SHARMA</span></div>
         <ul class="nav-links">
             <li><a href="#hero">Concept</a></li>
+            <li><a href="#interests">Interests</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#research">Tracklist</a></li>
             <li><a href="#blogs">Bites</a></li>
-            <li><a href="#skills">Studio</a></li>
         </ul>
     </nav>
 
@@ -436,7 +493,50 @@
             </div>
         </section>
 
-        <!-- New Experiences Section -->
+        <!-- New Interests & Passions Section -->
+        <section id="interests">
+            <div class="sec-header">
+                <span class="sec-label">The Blueprint // Focus Elements</span>
+                <h2 class="sec-title">Core Fields of Interest</h2>
+            </div>
+
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">✦</div>
+                    <div class="interest-name">Astronomy</div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">✦</div>
+                    <div class="interest-name">STEM Research</div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">✦</div>
+                    <div class="interest-name">Entrepreneurship</div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">✦</div>
+                    <div class="interest-name">Mentoring</div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">✦</div>
+                    <div class="interest-name">Biomedical Science</div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">✦</div>
+                    <div class="interest-name">Data Science</div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">✦</div>
+                    <div class="interest-name">Statistics</div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">✦</div>
+                    <div class="interest-name">Creative Writing</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiences Section -->
         <section id="experience">
             <div class="sec-header">
                 <span class="sec-label">Track 01 // Headliners</span>
@@ -444,7 +544,6 @@
             </div>
 
             <div class="grid-layout">
-                <!-- Startup Founder -->
                 <div class="pink-card">
                     <div>
                         <span class="card-date">PRESENT</span>
@@ -457,7 +556,6 @@
                     </div>
                 </div>
 
-                <!-- STEM Community Founder -->
                 <div class="pink-card">
                     <div>
                         <span class="card-date">PRESENT</span>
@@ -470,7 +568,6 @@
                     </div>
                 </div>
 
-                <!-- Evaluator & Panelist -->
                 <div class="pink-card">
                     <div>
                         <span class="card-date">PANEL SYSTEM</span>
@@ -483,7 +580,6 @@
                     </div>
                 </div>
 
-                <!-- NYAS Team Lead -->
                 <div class="pink-card">
                     <div>
                         <span class="card-date">GLOBAL LEADERSHIP</span>
@@ -559,70 +655,53 @@
             </div>
         </section>
 
-        <!-- Sci-Bites & Blogs Stage -->
-        <section id="blogs">
+        <!-- Sci-Bites & Blogs Stage with Future Placeholders -->
+        <section id="blogs" style="padding-bottom: 6rem;">
             <div class="sec-header">
                 <span class="sec-label">Track 03 // Editorial Log</span>
-                <h2 class="sec-title">Sci-Bites & Creative Interludes</h2>
+                <h2 class="sec-title">Sci-Bites & Analytical Entries</h2>
             </div>
 
             <div class="blog-box">
                 <div class="blog-tabs">
-                    <button class="tab-btn active" onclick="switchBPMedia(event, 'bp-one')">01. MOLECULAR NETWORKS</button>
-                    <button class="tab-btn" onclick="switchBPMedia(event, 'bp-two')">02. ALIGNMENT SYSTEMS</button>
-                    <button class="tab-btn" onclick="switchBPMedia(event, 'bp-three')">03. CREATIVE INTERLUDE</button>
+                    <button class="tab-btn active" onclick="switchBPMedia(event, 'bp-one')">Track 01</button>
+                    <button class="tab-btn" onclick="switchBPMedia(event, 'bp-two')">Track 02</button>
+                    <button class="tab-btn" onclick="switchBPMedia(event, 'bp-three')">Track 03</button>
                 </div>
 
+                <!-- Placeholder 1 -->
                 <div id="bp-one" class="blog-content-item active">
-                    <h3 class="blog-title">Using Machine Learning to Map Small Molecule Interactions</h3>
+                    <span class="coming-soon-badge">Track Coming Soon</span>
+                    <h3 class="blog-title">Data Architectures in Computational Biology</h3>
                     <p class="blog-text">
-                        Traditional therapeutic synthesis pathways face multi-year validation delays. By shifting target binding predictions onto structural neural networks, labs can simulate chemical perturbation responses instantly across transcriptomic records...
+                        This structural space is preserved for upcoming publications detailing multi-variable statistical matrices and their role in optimizing therapeutic synthesis modeling...
                     </p>
-                    <a href="#" class="btn btn-outline" style="padding: 0.6rem 1.2rem; display: inline-block;">Read Log Entry</a>
                 </div>
 
+                <!-- Placeholder 2 -->
                 <div id="bp-two" class="blog-content-item">
-                    <h3 class="blog-title">Ethical Guardrails in Generative Biotech</h3>
+                    <span class="coming-soon-badge">Track Coming Soon</span>
+                    <h3 class="blog-title">Astro-Biomedical Convergence Models</h3>
                     <p class="blog-text">
-                        As deep reinforcement learning configurations adapt to sequence functional biological patterns, open-source alignment validation models must become standard practice to enforce biosecurity limits across public environments...
+                        This structural space is preserved for future analytical reviews regarding cellular degradation parameters during deep-space orbital simulations...
                     </p>
-                    <a href="#" class="btn btn-outline" style="padding: 0.6rem 1.2rem; display: inline-block;">Read Log Entry</a>
                 </div>
 
+                <!-- Placeholder 3 -->
                 <div id="bp-three" class="blog-content-item">
-                    <h3 class="blog-title">The Sonic Resonance: Harmonies In Art & Science</h3>
+                    <span class="coming-soon-badge">Track Coming Soon</span>
+                    <h3 class="blog-title">The Creative Paradigm in Technical Writing</h3>
                     <p class="blog-text">
-                        Music and laboratory research are driven by the exact same spark: patterns. Exploring how acoustic wave dynamics and harmonic structures interact with biological stress environments offers unique creative methods to approach focus and mental pacing...
+                        This structural space is preserved for an upcoming feature exploring how narrative frameworks improve clarity within complex clinical reporting ecosystems...
                     </p>
-                    <a href="#" class="btn btn-outline" style="padding: 0.6rem 1.2rem; display: inline-block;">Listen / Read Entry</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Studio Capabilities Section -->
-        <section id="skills" style="padding-bottom: 6rem;">
-            <div class="sec-header">
-                <span class="sec-label">Track 04 // Studio Vault</span>
-                <h2 class="sec-title">Capabilities Matrix</h2>
-            </div>
-
-            <div class="skills-container">
-                <span class="skill-pill">Medical Writing & Editing</span>
-                <span class="skill-pill">Scientific Review Processes</span>
-                <span class="skill-pill">Biomedical Analysis</span>
-                <span class="skill-pill">Hackathon Organizing & Hosting</span>
-                <span class="skill-pill">Project Judging Frameworks</span>
-                <span class="skill-pill">Team Leadership (NYAS)</span>
-                <span class="skill-pill">Python & SQL Architecture</span>
-                <span class="skill-pill">Startup Scaling & Pitching</span>
-                <span class="skill-pill">Musical Composition</span>
             </div>
         </section>
 
     </div>
 
     <footer>
-        ✦ STAGE CONFLICT ENGINE v2.5 // KANIKA SHARMA © 2026 // STAY PINK ✦
+        ✦ STAGE CONFLICT ENGINE v3.0 // KANIKA SHARMA © 2026 // STAY PINK ✦
     </footer>
 
     <script>
